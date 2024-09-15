@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperHero | Helena</title>
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CanvasJS -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!--Nav section-->
+    <nav class="bg-danger text-bold text-light py-3">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="#main">
+                <img src="assets/img/sh2.jpg" alt="Logo" width="50" height="50" class="d-inline-block">
+                <span class="fs-5 ms-2">SuperHero</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenedor principal usando el sistema de grillas de Bootstrap -->
+    <section id="main">
+        <div class="container mt-5">
+            <!-- Centrar el formulario y la imagen -->
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <h1 class="text-bold">Encuentra tu SuperHero</h1>
+                    <img src="assets/img/sh1.jpg" alt="" class="mb-3 img-fluid" width="300" height="280">
+                    <form id="superhero-form" class="mb-5">
+                        <div class="mb-3">
+                            <label for="hero-id" class="form-label">Ingresa el número del SuperHero</label>
+                            <input type="text" class="form-control" id="hero-id" placeholder="Número de SuperHero">
+                        </div>
+                        <button type="submit" class="btn btn-danger btn-lg">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección para mostrar la tarjeta y el gráfico -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna para la tarjeta del superhéroe -->
+            <div class="col-md-6 mb-4">
+                <div id="superhero-card" class="card d-none bg-danger p-3">
+                    <div class="card-body ">
+                        <h2 class="card-title text-center text-warning" id="hero-name"></h2>
+                        <img id="hero-image" class="card-img-top mb-3" alt="Imagen del héroe">
+                        <p class="card-text" id="hero-description"></p>
+                        <ul class="list-group">
+                            <li class="list-group-item"><strong style="color: blue;">Altura:</strong> <span id="hero-height"></span></li>
+                            <li class="list-group-item"><strong style="color: blue;">Peso:</strong> <span id="hero-weight"></span></li>
+                            <li class="list-group-item"><strong style="color: blue;">Primera aparición:</strong> <span id="hero-first-appearance"></span></li>
+                            <li class="list-group-item"><strong style="color: blue;">Publicado por:</strong> <span id="hero-publisher"></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Columna para el gráfico de estadísticas -->
+            <div class="col-md-6 mb-4">
+                <div id="hero-stats" class="d-none">
+                    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-danger text-light text-center py-3 mt-5">
+        <p>SuperHero © 2024</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
